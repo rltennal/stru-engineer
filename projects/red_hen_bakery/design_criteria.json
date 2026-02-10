@@ -1,0 +1,98 @@
+{
+    "project": {
+        "name": "Red Hen Bakery",
+        "number": "25.048",
+        "path": "C:\\Users\\Ray\\OneDrive - rl.tennal\\Projects\\_Adhoc\\Red Hen Bakery (25.048)\\Design",
+        "designer": "RL Tennal",
+        "date": "2026-02-10",
+        "description": "Site retaining wall supporting soil of varying height"
+    },
+
+    "codes": {
+        "building_code": "2021 IBC",
+        "concrete_code": "ACI 318-19",
+        "residential_note": "Walls retaining <= 4 ft unbalanced backfill are per IRC prescriptive requirements (not engineered per this schedule)"
+    },
+
+    "soil": {
+        "backfill_gamma_pcf": 120,
+        "backfill_phi_deg": 30,
+        "cohesion_psf": 0,
+        "condition": "active",
+        "mu_sliding": 0.45,
+        "allowable_bearing_psf": 2500,
+        "passive_permitted": false,
+        "passive_gamma_pcf": null,
+        "passive_phi_deg": null,
+        "_notes": "Assumed typical granular backfill. Verify with project geotech report. Allowable bearing = 2500 psf assumed — confirm with geotech."
+    },
+
+    "water": {
+        "drainage_provided": true,
+        "gwl_depth_ft": null,
+        "_notes": "Positive drainage assumed behind wall (gravel drain + perforated pipe + filter fabric). No hydrostatic buildup per IBC if drainage is maintained."
+    },
+
+    "surcharge": {
+        "uniform_psf": 100,
+        "_notes": "100 psf equivalent fluid surcharge for adjacent grade traffic/light storage. Adjust for specific project loading."
+    },
+
+    "seismic": {
+        "sdc": "",
+        "sds": 0.0,
+        "sd1": 0.0,
+        "kh": 0.0,
+        "kv": 0.0,
+        "use_mononobe_okabe": false,
+        "_notes": "Seismic not applied in this preliminary design. Add SDC and M-O parameters when site-specific seismic data is available."
+    },
+
+    "materials": {
+        "fc_psi": 3000,
+        "gamma_conc_pcf": 150,
+        "rebar_max_bar_size": 6,
+        "_notes": "f'c = 3000 psi. #4 Gr.40 or smaller, #5 Gr.60 or larger. Prefer #4 and smaller. Avoid #7+."
+    },
+
+    "exposure": {
+        "freeze_thaw": "F1",
+        "sulfate": "S0",
+        "corrosion": "C1",
+        "_notes": "F1 moderate freeze-thaw (exterior exposed). S0 no sulfate exposure. C1 corrosion — reinforcement exposed to moisture. Cover = 2 in (cast against soil)."
+    },
+
+    "stability_factors": {
+        "fs_overturning": 1.5,
+        "fs_sliding": 1.5
+    },
+
+    "schedule": {
+        "heights_ft": [5, 6, 7, 8, 9, 10, 11, 12],
+        "irc_max_height_ft": 4,
+        "thickness_rules": {
+            "below_10ft": {
+                "stem_top_in": 8,
+                "stem_bot_in": 8,
+                "base_in": 8
+            },
+            "at_or_above_10ft": [
+                {
+                    "label": "8-inch option",
+                    "stem_top_in": 8,
+                    "stem_bot_in": 8,
+                    "base_in": 8
+                },
+                {
+                    "label": "10-inch option",
+                    "stem_top_in": 8,
+                    "stem_bot_in": 10,
+                    "base_in": 10
+                }
+            ]
+        },
+        "toe_ft": 1.0,
+        "embedment_ft": 1.0,
+        "backfill_slope_deg": 0
+    }
+}

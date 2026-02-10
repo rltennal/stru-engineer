@@ -207,7 +207,10 @@ class DesignReport:
         if not self.stability or not self.sections:
             return False
         stab_ok = all(r.status == "OK" for r in self.stability)
-        sect_ok = all(s.flexure_ok and s.shear_ok for s in self.sections)
+        sect_ok = all(
+            s.bar is not None and s.flexure_ok and s.shear_ok
+            for s in self.sections
+        )
         return stab_ok and sect_ok
 
     def summary(self) -> str:

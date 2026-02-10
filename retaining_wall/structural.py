@@ -210,10 +210,26 @@ def design_flexure(
     """
     b = 12.0  # per foot of wall
     d = h_in - cover_in - bar_dia_in / 2.0
+    if d <= 0:
+        return SectionDesign(
+            location=location, h_in=h_in, cover_in=cover_in, d_in=d,
+            Mu_lbft=Mu_lbft, Vu_lb=Vu_lb,
+            notes="Effective depth d <= 0 — section too thin for cover.",
+        )
     Mu_lbin = Mu_lbft * 12.0  # convert to lb·in
 
     # Required steel
-    As_req = _as_required_flexure(Mu_lbin, fc, fy, b, d)
+    try:
+        As_req = _as_required_flexure(Mu_lbin, fc, fy, b, d)
+    except ValueError as exc:
+        As_min_flex = min_flexural_steel(fc, fy, b, d)
+        As_ts = min_temp_shrinkage_steel(h_in, b)
+        return SectionDesign(
+            location=location, h_in=h_in, cover_in=cover_in, d_in=d,
+            Mu_lbft=Mu_lbft, Vu_lb=Vu_lb,
+            As_req=0, As_min=As_min_flex, As_ts=As_ts,
+            notes=f"Section too small: {exc}",
+        )
 
     # Minimums
     As_min_flex = min_flexural_steel(fc, fy, b, d)
