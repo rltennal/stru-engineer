@@ -1,0 +1,535 @@
+========================================================================================================================
+RETAINING WALL SCHEDULE — Red Hen Bakery
+Project No: 25.048    Date: 2026-02-10
+Designer: RL Tennal
+========================================================================================================================
+
+DESIGN BASIS:
+  Codes: 2021 IBC / ACI 318-19
+  Walls retaining <= 4 ft unbalanced backfill are per IRC prescriptive requirements (not engineered per this schedule)
+  Backfill: gamma = 120 pcf, phi = 30 deg, condition = active
+  Allowable bearing = 2500 psf   mu (sliding) = 0.45
+  Surcharge = 100 psf uniform
+  Drainage: Provided
+  f'c = 3000 psi, Rebar: #4 Gr.40 / #5 Gr.60, max bar = #6
+  FS required: overturning >= 1.5, sliding >= 1.5
+
+Mark                      H  t_top t_bot t_ftg   Toe  Heel     B   FS_OT FS_SL  q_max        Stem        Heel         Toe  Status
+......................   ft     in    in    in    ft    ft    ft                  psf      bar@sp      bar@sp      bar@sp        
+------------------------------------------------------------------------------------------------------------------------
+W1                        5      8     8     8   1.0  3.00  4.67    4.30  1.56    885       #3@4"       #3@4"       #3@4"      OK
+W2                        6      8     8     8   1.0  3.50  5.17    3.98  1.52   1090       #3@4"       #3@2"       #3@4"      OK
+W3                        7      8     8     8   2.5  3.75  6.92    5.18  1.52    712       #3@4"       #3@2"       #3@4"      OK
+    ** Toe increased to 2.5 ft for sliding
+W4                        8      8     8    10   2.0  4.50  7.17    4.50  1.52   1078       #3@3"       #3@2"       #3@2"      OK
+    ** Footing thickened to 10" (requested 8" insufficient for heel shear); Toe increased to 2.0 ft for sliding
+W5                        9      8     8    12   2.5  5.00  8.17    4.62  1.51   1116       #3@2"       #3@2"       #3@2"      OK
+    ** Footing thickened to 12" (requested 8" insufficient for heel shear); Toe increased to 2.5 ft for sliding
+W6 (8-inch option)       10      8     8    16   1.0  6.00  7.67    3.45  1.50   2178       #3@2"       #4@2"       #3@2"      OK
+    ** Footing thickened to 16" (requested 8" insufficient for heel shear)
+W7 (10-inch option)      10      8    10    16   1.0  6.00  7.83    3.59  1.53   2111       #3@2"       #4@2"       #3@2"      OK
+    ** Footing thickened to 16" (requested 10" insufficient for heel shear)
+W8 (8-inch option)       11      8     8    18   1.5  6.50  8.67    3.65  1.50   2140       #4@2"       #4@2"       #3@1"      OK
+    ** Footing thickened to 18" (requested 8" insufficient for heel shear); Toe increased to 1.5 ft for sliding
+W9 (10-inch option)      11      8    10    18   1.0  6.50  8.33    3.40  1.50   2424       #3@2"       #4@2"       #3@1"      OK
+    ** Footing thickened to 18" (requested 10" insufficient for heel shear)
+W10 (8-inch option)      12      8     8    22   1.5  7.25  9.42    3.60  1.51   2457       #4@2"       #4@2"       #4@2"      OK
+    ** Footing thickened to 22" (requested 8" insufficient for heel shear); Toe increased to 1.5 ft for sliding
+W11 (10-inch option)     12      8    10    22   1.5  7.25  9.58    3.72  1.53   2394       #4@2"       #4@2"       #4@2"      OK
+    ** Footing thickened to 22" (requested 10" insufficient for heel shear); Toe increased to 1.5 ft for sliding
+------------------------------------------------------------------------------------------------------------------------
+
+NOTES:
+  1. Walls retaining <= 4 ft unbalanced backfill: per IRC prescriptive requirements.
+  2. All dimensions are nominal. Stem thickness = constant 8" for walls < 10 ft.
+  3. For walls >= 10 ft, two options are shown: 8" and 10" stem/footing.
+  4. Heel length is auto-sized to satisfy stability (FS_OT >= 1.5, FS_SL >= 1.5, q <= q_allow).
+  5. Stem reinforcing is vertical steel on the earth-side face (tension side).
+  6. Heel reinforcing is top steel; toe reinforcing is bottom steel.
+  7. T&S steel (transverse): 0.0018 x Ag = 0.0018 x 12 x t  (provide in horizontal direction).
+  8. Cover = 2" (cast against soil) per ACI 318-19 Table 20.6.1.3.1.
+  9. Verify all soil parameters with project geotechnical report before final design.
+ 10. Embedment = 1'-0" assumed. Adjust based on frost depth and site conditions.
+
+========================================================================================================================
+
+================================================================================
+DETAILED DESIGN — W1  (H = 5 ft, t_stem = 8", t_ftg = 8")
+================================================================================
+
+GEOMETRY:
+  Stem: 5.0 ft tall, 8" top / 8" base
+  Footing: 4.67 ft total  (toe = 1.0 ft, stem = 0.67 ft, heel = 3.00 ft)
+  Footing thickness: 8"
+  Embedment: 1.0 ft
+
+UNFACTORED LATERAL LOADS:
+  Earth pressure (active, β=0°): H = 642 lb/ft @ 1.89 ft above base
+  Uniform surcharge (100 psf): H = 189 lb/ft @ 2.83 ft above base
+
+STABILITY (service level):
+  Overturning: FS = 4.30 (req'd 1.50) → OK
+  Sliding: FS = 1.56 (req'd 1.50) → OK
+  Bearing: FS = 2.82 (req'd 1.00) → OK  [q_max=885 psf, q_min=352 psf, e=0.34 ft]
+
+STRUCTURAL DESIGN (ACI 318-19 strength):
+[stem_base]  h=8″  d=5.8″  Mu=2000 lb·ft  Vu=1067 lb
+  As_req=0.118 in²/ft  → #3 @ 3.5″ o.c.
+  φMn=6298 lb·ft (OK)  φVc=5731 lb (OK)
+
+[heel (top steel)]  h=8″  d=5.8″  Mu=4860 lb·ft  Vu=3240 lb
+  As_req=0.291 in²/ft  → #3 @ 3.5″ o.c.
+  φMn=6298 lb·ft (OK)  φVc=5731 lb (OK)
+
+[toe (bottom steel)]  h=8″  d=5.8″  Mu=564 lb·ft  Vu=1127 lb
+  As_req=0.033 in²/ft  → #3 @ 3.5″ o.c.
+  φMn=6298 lb·ft (OK)  φVc=5731 lb (OK)
+
+DEVELOPMENT LENGTHS:
+  stem_base: 12.0 in
+  stem_base (hook): 6.0 in
+  heel (top steel): 14.2 in
+  heel (top steel) (hook): 6.0 in
+  toe (bottom steel): 12.0 in
+  toe (bottom steel) (hook): 6.0 in
+
+RESULT: ALL CHECKS PASS
+
+
+================================================================================
+DETAILED DESIGN — W2  (H = 6 ft, t_stem = 8", t_ftg = 8")
+================================================================================
+
+GEOMETRY:
+  Stem: 6.0 ft tall, 8" top / 8" base
+  Footing: 5.17 ft total  (toe = 1.0 ft, stem = 0.67 ft, heel = 3.50 ft)
+  Footing thickness: 8"
+  Embedment: 1.0 ft
+
+UNFACTORED LATERAL LOADS:
+  Earth pressure (active, β=0°): H = 889 lb/ft @ 2.22 ft above base
+  Uniform surcharge (100 psf): H = 222 lb/ft @ 3.33 ft above base
+
+STABILITY (service level):
+  Overturning: FS = 3.98 (req'd 1.50) → OK
+  Sliding: FS = 1.52 (req'd 1.50) → OK
+  Bearing: FS = 2.29 (req'd 1.00) → OK  [q_max=1090 psf, q_min=364 psf, e=0.43 ft]
+
+STRUCTURAL DESIGN (ACI 318-19 strength):
+[stem_base]  h=8″  d=5.8″  Mu=3264 lb·ft  Vu=1472 lb
+  As_req=0.193 in²/ft  → #3 @ 3.5″ o.c.
+  φMn=6298 lb·ft (OK)  φVc=5731 lb (OK)
+
+[heel (top steel)]  h=8″  d=5.8″  Mu=7791 lb·ft  Vu=4452 lb
+  As_req=0.478 in²/ft  → #3 @ 2.5″ o.c.
+  φMn=8660 lb·ft (OK)  φVc=5731 lb (OK)
+
+[toe (bottom steel)]  h=8″  d=5.8″  Mu=717 lb·ft  Vu=1434 lb
+  As_req=0.042 in²/ft  → #3 @ 3.5″ o.c.
+  φMn=6298 lb·ft (OK)  φVc=5731 lb (OK)
+
+DEVELOPMENT LENGTHS:
+  stem_base: 12.0 in
+  stem_base (hook): 6.0 in
+  heel (top steel): 14.2 in
+  heel (top steel) (hook): 6.0 in
+  toe (bottom steel): 12.0 in
+  toe (bottom steel) (hook): 6.0 in
+
+RESULT: ALL CHECKS PASS
+
+
+================================================================================
+DETAILED DESIGN — W3  (H = 7 ft, t_stem = 8", t_ftg = 8")
+================================================================================
+
+GEOMETRY:
+  Stem: 7.0 ft tall, 8" top / 8" base
+  Footing: 6.92 ft total  (toe = 2.5 ft, stem = 0.67 ft, heel = 3.75 ft)
+  Footing thickness: 8"
+  Embedment: 1.0 ft
+
+UNFACTORED LATERAL LOADS:
+  Earth pressure (active, β=0°): H = 1176 lb/ft @ 2.56 ft above base
+  Uniform surcharge (100 psf): H = 256 lb/ft @ 3.83 ft above base
+
+STABILITY (service level):
+  Overturning: FS = 5.18 (req'd 1.50) → OK
+  Sliding: FS = 1.52 (req'd 1.50) → OK
+  Bearing: FS = 3.51 (req'd 1.00) → OK  [q_max=712 psf, q_min=688 psf, e=0.02 ft]
+
+STRUCTURAL DESIGN (ACI 318-19 strength):
+[stem_base]  h=8″  d=5.8″  Mu=4965 lb·ft  Vu=1941 lb
+  As_req=0.298 in²/ft  → #3 @ 3.5″ o.c.
+  φMn=6298 lb·ft (OK)  φVc=5731 lb (OK)
+
+[heel (top steel)]  h=8″  d=5.8″  Mu=10294 lb·ft  Vu=5490 lb
+  As_req=0.644 in²/ft  → #3 @ 2.0″ o.c.
+  φMn=10655 lb·ft (OK)  φVc=5731 lb (OK)
+
+[toe (bottom steel)]  h=8″  d=5.8″  Mu=2920 lb·ft  Vu=2336 lb
+  As_req=0.173 in²/ft  → #3 @ 3.5″ o.c.
+  φMn=6298 lb·ft (OK)  φVc=5731 lb (OK)
+
+DEVELOPMENT LENGTHS:
+  stem_base: 12.0 in
+  stem_base (hook): 6.0 in
+  heel (top steel): 14.2 in
+  heel (top steel) (hook): 6.0 in
+  toe (bottom steel): 12.0 in
+  toe (bottom steel) (hook): 6.0 in
+
+RESULT: ALL CHECKS PASS
+  Toe increased to 2.5 ft for sliding
+
+
+================================================================================
+DETAILED DESIGN — W4  (H = 8 ft, t_stem = 8", t_ftg = 10")
+================================================================================
+
+GEOMETRY:
+  Stem: 8.0 ft tall, 8" top / 8" base
+  Footing: 7.17 ft total  (toe = 2.0 ft, stem = 0.67 ft, heel = 4.50 ft)
+  Footing thickness: 10"
+  Embedment: 1.0 ft
+
+UNFACTORED LATERAL LOADS:
+  Earth pressure (active, β=0°): H = 1561 lb/ft @ 2.94 ft above base
+  Uniform surcharge (100 psf): H = 294 lb/ft @ 4.42 ft above base
+
+STABILITY (service level):
+  Overturning: FS = 4.50 (req'd 1.50) → OK
+  Sliding: FS = 1.52 (req'd 1.50) → OK
+  Bearing: FS = 2.32 (req'd 1.00) → OK  [q_max=1078 psf, q_min=668 psf, e=0.28 ft]
+
+STRUCTURAL DESIGN (ACI 318-19 strength):
+[stem_base]  h=8″  d=5.8″  Mu=7168 lb·ft  Vu=2475 lb
+  As_req=0.437 in²/ft  → #3 @ 3.0″ o.c.
+  φMn=7293 lb·ft (OK)  φVc=5731 lb (OK)
+
+[heel (top steel)]  h=10.0″  d=7.8″  Mu=17071 lb·ft  Vu=7587 lb
+  As_req=0.786 in²/ft  → #3 @ 1.5″ o.c.
+  φMn=19107 lb·ft (OK)  φVc=7702 lb (OK)
+
+[toe (bottom steel)]  h=10.0″  d=7.8″  Mu=2825 lb·ft  Vu=2825 lb
+  As_req=0.123 in²/ft  → #3 @ 2.5″ o.c.
+  φMn=11828 lb·ft (OK)  φVc=7702 lb (OK)
+
+DEVELOPMENT LENGTHS:
+  stem_base: 12.0 in
+  stem_base (hook): 6.0 in
+  heel (top steel): 14.2 in
+  heel (top steel) (hook): 6.0 in
+  toe (bottom steel): 12.0 in
+  toe (bottom steel) (hook): 6.0 in
+
+RESULT: ALL CHECKS PASS
+  Footing thickened to 10" (requested 8" insufficient for heel shear); Toe increased to 2.0 ft for sliding
+
+
+================================================================================
+DETAILED DESIGN — W5  (H = 9 ft, t_stem = 8", t_ftg = 12")
+================================================================================
+
+GEOMETRY:
+  Stem: 9.0 ft tall, 8" top / 8" base
+  Footing: 8.17 ft total  (toe = 2.5 ft, stem = 0.67 ft, heel = 5.00 ft)
+  Footing thickness: 12"
+  Embedment: 1.0 ft
+
+UNFACTORED LATERAL LOADS:
+  Earth pressure (active, β=0°): H = 2000 lb/ft @ 3.33 ft above base
+  Uniform surcharge (100 psf): H = 333 lb/ft @ 5.00 ft above base
+
+STABILITY (service level):
+  Overturning: FS = 4.62 (req'd 1.50) → OK
+  Sliding: FS = 1.51 (req'd 1.50) → OK
+  Bearing: FS = 2.24 (req'd 1.00) → OK  [q_max=1116 psf, q_min=800 psf, e=0.22 ft]
+
+STRUCTURAL DESIGN (ACI 318-19 strength):
+[stem_base]  h=8″  d=5.8″  Mu=9936 lb·ft  Vu=3072 lb
+  As_req=0.620 in²/ft  → #3 @ 2.0″ o.c.
+  φMn=10655 lb·ft (OK)  φVc=5731 lb (OK)
+
+[heel (top steel)]  h=12.0″  d=9.8″  Mu=23850 lb·ft  Vu=9540 lb
+  As_req=0.866 in²/ft  → #3 @ 1.5″ o.c.
+  φMn=24387 lb·ft (OK)  φVc=9674 lb (OK)
+
+[toe (bottom steel)]  h=12.0″  d=9.8″  Mu=4580 lb·ft  Vu=3664 lb
+  As_req=0.158 in²/ft  → #3 @ 2.0″ o.c.
+  φMn=18575 lb·ft (OK)  φVc=9674 lb (OK)
+
+DEVELOPMENT LENGTHS:
+  stem_base: 12.0 in
+  stem_base (hook): 6.0 in
+  heel (top steel): 14.2 in
+  heel (top steel) (hook): 6.0 in
+  toe (bottom steel): 12.0 in
+  toe (bottom steel) (hook): 6.0 in
+
+RESULT: ALL CHECKS PASS
+  Footing thickened to 12" (requested 8" insufficient for heel shear); Toe increased to 2.5 ft for sliding
+
+
+================================================================================
+DETAILED DESIGN — W6 (8-inch option)  (H = 10 ft, t_stem = 8", t_ftg = 16")
+================================================================================
+
+GEOMETRY:
+  Stem: 10.0 ft tall, 8" top / 8" base
+  Footing: 7.67 ft total  (toe = 1.0 ft, stem = 0.67 ft, heel = 6.00 ft)
+  Footing thickness: 16"
+  Embedment: 1.0 ft
+
+UNFACTORED LATERAL LOADS:
+  Earth pressure (active, β=0°): H = 2569 lb/ft @ 3.78 ft above base
+  Uniform surcharge (100 psf): H = 378 lb/ft @ 5.67 ft above base
+
+STABILITY (service level):
+  Overturning: FS = 3.45 (req'd 1.50) → OK
+  Sliding: FS = 1.50 (req'd 1.50) → OK
+  Bearing: FS = 1.15 (req'd 1.00) → OK  [q_max=2178 psf, q_min=392 psf, e=0.89 ft]
+
+STRUCTURAL DESIGN (ACI 318-19 strength):
+[stem_base]  h=8″  d=5.8″  Mu=13333 lb·ft  Vu=3733 lb
+  As_req=0.856 in²/ft  → #3 @ 1.5″ o.c.
+  φMn=13827 lb·ft (OK)  φVc=5731 lb (OK)
+
+[heel (top steel)]  h=16.0″  d=13.8″  Mu=38880 lb·ft  Vu=12960 lb
+  As_req=0.989 in²/ft  → #4 @ 2.0″ o.c.
+  φMn=46676 lb·ft (OK)  φVc=13556 lb (OK)
+
+[toe (bottom steel)]  h=16.0″  d=13.8″  Mu=1505 lb·ft  Vu=3010 lb
+  As_req=0.037 in²/ft  → #3 @ 1.5″ o.c.
+  φMn=34947 lb·ft (OK)  φVc=13618 lb (OK)
+
+DEVELOPMENT LENGTHS:
+  stem_base: 12.0 in
+  stem_base (hook): 6.0 in
+  heel (top steel): 19.0 in
+  heel (top steel) (hook): 6.6 in
+  toe (bottom steel): 12.0 in
+  toe (bottom steel) (hook): 6.0 in
+
+RESULT: ALL CHECKS PASS
+  Footing thickened to 16" (requested 8" insufficient for heel shear)
+
+
+================================================================================
+DETAILED DESIGN — W7 (10-inch option)  (H = 10 ft, t_stem = 10", t_ftg = 16")
+================================================================================
+
+GEOMETRY:
+  Stem: 10.0 ft tall, 8" top / 10" base
+  Footing: 7.83 ft total  (toe = 1.0 ft, stem = 0.83 ft, heel = 6.00 ft)
+  Footing thickness: 16"
+  Embedment: 1.0 ft
+
+UNFACTORED LATERAL LOADS:
+  Earth pressure (active, β=0°): H = 2569 lb/ft @ 3.78 ft above base
+  Uniform surcharge (100 psf): H = 378 lb/ft @ 5.67 ft above base
+
+STABILITY (service level):
+  Overturning: FS = 3.59 (req'd 1.50) → OK
+  Sliding: FS = 1.53 (req'd 1.50) → OK
+  Bearing: FS = 1.18 (req'd 1.00) → OK  [q_max=2111 psf, q_min=445 psf, e=0.85 ft]
+
+STRUCTURAL DESIGN (ACI 318-19 strength):
+[stem_base]  h=10″  d=7.8″  Mu=13333 lb·ft  Vu=3733 lb
+  As_req=0.604 in²/ft  → #3 @ 2.0″ o.c.
+  φMn=14615 lb·ft (OK)  φVc=7702 lb (OK)
+
+[heel (top steel)]  h=16.0″  d=13.8″  Mu=38880 lb·ft  Vu=12960 lb
+  As_req=0.989 in²/ft  → #4 @ 2.0″ o.c.
+  φMn=46676 lb·ft (OK)  φVc=13556 lb (OK)
+
+[toe (bottom steel)]  h=16.0″  d=13.8″  Mu=1459 lb·ft  Vu=2919 lb
+  As_req=0.035 in²/ft  → #3 @ 1.5″ o.c.
+  φMn=34947 lb·ft (OK)  φVc=13618 lb (OK)
+
+DEVELOPMENT LENGTHS:
+  stem_base: 12.0 in
+  stem_base (hook): 6.0 in
+  heel (top steel): 19.0 in
+  heel (top steel) (hook): 6.6 in
+  toe (bottom steel): 12.0 in
+  toe (bottom steel) (hook): 6.0 in
+
+RESULT: ALL CHECKS PASS
+  Footing thickened to 16" (requested 10" insufficient for heel shear)
+
+
+================================================================================
+DETAILED DESIGN — W8 (8-inch option)  (H = 11 ft, t_stem = 8", t_ftg = 18")
+================================================================================
+
+GEOMETRY:
+  Stem: 11.0 ft tall, 8" top / 8" base
+  Footing: 8.67 ft total  (toe = 1.5 ft, stem = 0.67 ft, heel = 6.50 ft)
+  Footing thickness: 18"
+  Embedment: 1.0 ft
+
+UNFACTORED LATERAL LOADS:
+  Earth pressure (active, β=0°): H = 3125 lb/ft @ 4.17 ft above base
+  Uniform surcharge (100 psf): H = 417 lb/ft @ 6.25 ft above base
+
+STABILITY (service level):
+  Overturning: FS = 3.65 (req'd 1.50) → OK
+  Sliding: FS = 1.50 (req'd 1.50) → OK
+  Bearing: FS = 1.17 (req'd 1.00) → OK  [q_max=2140 psf, q_min=586 psf, e=0.82 ft]
+
+STRUCTURAL DESIGN (ACI 318-19 strength):
+[stem_base]  h=8″  d=5.8″  Mu=17424 lb·ft  Vu=4459 lb
+  As_req=1.164 in²/ft  → #4 @ 2.0″ o.c.
+  φMn=17876 lb·ft (OK)  φVc=5669 lb (OK)
+
+[heel (top steel)]  h=18.0″  d=15.8″  Mu=50320 lb·ft  Vu=15483 lb
+  As_req=1.117 in²/ft  → #4 @ 2.0″ o.c.
+  φMn=53876 lb·ft (OK)  φVc=15528 lb (OK)
+
+[toe (bottom steel)]  h=18.0″  d=15.8″  Mu=3260 lb·ft  Vu=4346 lb
+  As_req=0.069 in²/ft  → #3 @ 1.0″ o.c.
+  φMn=59201 lb·ft (OK)  φVc=15590 lb (OK)
+
+DEVELOPMENT LENGTHS:
+  stem_base: 14.6 in
+  stem_base (hook): 6.6 in
+  heel (top steel): 19.0 in
+  heel (top steel) (hook): 6.6 in
+  toe (bottom steel): 12.0 in
+  toe (bottom steel) (hook): 6.0 in
+
+RESULT: ALL CHECKS PASS
+  Footing thickened to 18" (requested 8" insufficient for heel shear); Toe increased to 1.5 ft for sliding
+
+
+================================================================================
+DETAILED DESIGN — W9 (10-inch option)  (H = 11 ft, t_stem = 10", t_ftg = 18")
+================================================================================
+
+GEOMETRY:
+  Stem: 11.0 ft tall, 8" top / 10" base
+  Footing: 8.33 ft total  (toe = 1.0 ft, stem = 0.83 ft, heel = 6.50 ft)
+  Footing thickness: 18"
+  Embedment: 1.0 ft
+
+UNFACTORED LATERAL LOADS:
+  Earth pressure (active, β=0°): H = 3125 lb/ft @ 4.17 ft above base
+  Uniform surcharge (100 psf): H = 417 lb/ft @ 6.25 ft above base
+
+STABILITY (service level):
+  Overturning: FS = 3.40 (req'd 1.50) → OK
+  Sliding: FS = 1.50 (req'd 1.50) → OK
+  Bearing: FS = 1.03 (req'd 1.00) → OK  [q_max=2424 psf, q_min=411 psf, e=0.99 ft]
+
+STRUCTURAL DESIGN (ACI 318-19 strength):
+[stem_base]  h=10″  d=7.8″  Mu=17424 lb·ft  Vu=4459 lb
+  As_req=0.804 in²/ft  → #3 @ 1.5″ o.c.
+  φMn=19107 lb·ft (OK)  φVc=7702 lb (OK)
+
+[heel (top steel)]  h=18.0″  d=15.8″  Mu=50320 lb·ft  Vu=15483 lb
+  As_req=1.117 in²/ft  → #4 @ 2.0″ o.c.
+  φMn=53876 lb·ft (OK)  φVc=15528 lb (OK)
+
+[toe (bottom steel)]  h=18.0″  d=15.8″  Mu=1688 lb·ft  Vu=3375 lb
+  As_req=0.036 in²/ft  → #3 @ 1.0″ o.c.
+  φMn=59201 lb·ft (OK)  φVc=15590 lb (OK)
+
+DEVELOPMENT LENGTHS:
+  stem_base: 12.0 in
+  stem_base (hook): 6.0 in
+  heel (top steel): 19.0 in
+  heel (top steel) (hook): 6.6 in
+  toe (bottom steel): 12.0 in
+  toe (bottom steel) (hook): 6.0 in
+
+RESULT: ALL CHECKS PASS
+  Footing thickened to 18" (requested 10" insufficient for heel shear)
+
+
+================================================================================
+DETAILED DESIGN — W10 (8-inch option)  (H = 12 ft, t_stem = 8", t_ftg = 22")
+================================================================================
+
+GEOMETRY:
+  Stem: 12.0 ft tall, 8" top / 8" base
+  Footing: 9.42 ft total  (toe = 1.5 ft, stem = 0.67 ft, heel = 7.25 ft)
+  Footing thickness: 22"
+  Embedment: 1.0 ft
+
+UNFACTORED LATERAL LOADS:
+  Earth pressure (active, β=0°): H = 3827 lb/ft @ 4.61 ft above base
+  Uniform surcharge (100 psf): H = 461 lb/ft @ 6.92 ft above base
+
+STABILITY (service level):
+  Overturning: FS = 3.60 (req'd 1.50) → OK
+  Sliding: FS = 1.51 (req'd 1.50) → OK
+  Bearing: FS = 1.02 (req'd 1.00) → OK  [q_max=2457 psf, q_min=604 psf, e=0.95 ft]
+
+STRUCTURAL DESIGN (ACI 318-19 strength):
+[stem_base]  h=8″  d=5.8″  Mu=22272 lb·ft  Vu=5248 lb
+  As_req=1.572 in²/ft  → #4 @ 1.5″ o.c.
+  φMn=22580 lb·ft (OK)  φVc=5669 lb (OK)
+
+[heel (top steel)]  h=22.0″  d=19.8″  Mu=69225 lb·ft  Vu=19096 lb
+  As_req=1.217 in²/ft  → #4 @ 1.5″ o.c.
+  φMn=89780 lb·ft (OK)  φVc=19472 lb (OK)
+
+[toe (bottom steel)]  h=22.0″  d=19.8″  Mu=3756 lb·ft  Vu=5008 lb
+  As_req=0.064 in²/ft  → #4 @ 2.0″ o.c.
+  φMn=68276 lb·ft (OK)  φVc=19472 lb (OK)
+
+DEVELOPMENT LENGTHS:
+  stem_base: 14.6 in
+  stem_base (hook): 6.6 in
+  heel (top steel): 19.0 in
+  heel (top steel) (hook): 6.6 in
+  toe (bottom steel): 14.6 in
+  toe (bottom steel) (hook): 6.6 in
+
+RESULT: ALL CHECKS PASS
+  Footing thickened to 22" (requested 8" insufficient for heel shear); Toe increased to 1.5 ft for sliding
+
+
+================================================================================
+DETAILED DESIGN — W11 (10-inch option)  (H = 12 ft, t_stem = 10", t_ftg = 22")
+================================================================================
+
+GEOMETRY:
+  Stem: 12.0 ft tall, 8" top / 10" base
+  Footing: 9.58 ft total  (toe = 1.5 ft, stem = 0.83 ft, heel = 7.25 ft)
+  Footing thickness: 22"
+  Embedment: 1.0 ft
+
+UNFACTORED LATERAL LOADS:
+  Earth pressure (active, β=0°): H = 3827 lb/ft @ 4.61 ft above base
+  Uniform surcharge (100 psf): H = 461 lb/ft @ 6.92 ft above base
+
+STABILITY (service level):
+  Overturning: FS = 3.72 (req'd 1.50) → OK
+  Sliding: FS = 1.53 (req'd 1.50) → OK
+  Bearing: FS = 1.04 (req'd 1.00) → OK  [q_max=2394 psf, q_min=654 psf, e=0.91 ft]
+
+STRUCTURAL DESIGN (ACI 318-19 strength):
+[stem_base]  h=10″  d=7.8″  Mu=22272 lb·ft  Vu=5248 lb
+  As_req=1.051 in²/ft  → #4 @ 2.0″ o.c.
+  φMn=25076 lb·ft (OK)  φVc=7641 lb (OK)
+
+[heel (top steel)]  h=22.0″  d=19.8″  Mu=69225 lb·ft  Vu=19096 lb
+  As_req=1.217 in²/ft  → #4 @ 1.5″ o.c.
+  φMn=89780 lb·ft (OK)  φVc=19472 lb (OK)
+
+[toe (bottom steel)]  h=22.0″  d=19.8″  Mu=3665 lb·ft  Vu=4886 lb
+  As_req=0.062 in²/ft  → #4 @ 2.0″ o.c.
+  φMn=68276 lb·ft (OK)  φVc=19472 lb (OK)
+
+DEVELOPMENT LENGTHS:
+  stem_base: 14.6 in
+  stem_base (hook): 6.6 in
+  heel (top steel): 19.0 in
+  heel (top steel) (hook): 6.6 in
+  toe (bottom steel): 14.6 in
+  toe (bottom steel) (hook): 6.6 in
+
+RESULT: ALL CHECKS PASS
+  Footing thickened to 22" (requested 10" insufficient for heel shear); Toe increased to 1.5 ft for sliding
